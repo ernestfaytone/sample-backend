@@ -12,9 +12,9 @@ Route::group([
     Route::post('register', 'UserController@register');
     Route::post('logout', 'AuthController@logout');
     Route::post('refresh', 'AuthController@refresh');
+    Route::get('user-list', 'UserController@userList');
     Route::post('delete/', 'UserController@deleteUser');
     Route::post('update/', 'UserController@updateUser');
 }); 
 
 Route::get('user/{id}','UserController@findUser');
-Route::get('user-list','UserController@userList');
