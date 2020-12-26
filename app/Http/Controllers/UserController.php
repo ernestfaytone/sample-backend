@@ -12,6 +12,7 @@ class UserController extends Controller {
     private $userModel;
     
     public function __construct() {
+        $this->middleware('auth:api', ['except' => ['findUser','register']]);
         $this->userModel = new User();
     }
 
